@@ -13,6 +13,7 @@ export const Container = styled.section`
     a {
         color: black;
         text-decoration: none;
+        margin: 0 0.5rem
     }
 
     a:hover {

@@ -5,8 +5,9 @@ export const Container = styled.header`
     background-color: #00B2FF;
     height: 7.5rem;
     display: flex;
+    margin-bottom: 1rem;
 
-    .logo a:link {
+    .logo a {
         text-decoration: none;
         color: #FFC700;
     }
@@ -38,6 +39,14 @@ export const Container = styled.header`
     .profile_space img{
         width: 3rem;
         height: 3rem; 
+    }
+
+    .profile_space img:hover{
+        border: solid black 2px;
+    }
+
+    .profile_space img:active{
+        background-color: #0f97d1;
     }
 
     .profile_space a:link {

@@ -5,22 +5,27 @@ export const Container = styled.footer`
     background-color: #FFC700;
     height: 4.5rem;
     display: flex;
+    margin-top: 1rem;
 
     p { 
         font-size: 1.25rem;
         font-weight: bold;
-        margin: 1.5rem 0rem 0rem 2rem;
-        cursor: pointer;
+        margin: 1.5rem 1rem;
     }
 
-    p:hover {
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    a:hover {
         text-decoration: underline;
     }
 
     .img1 {
         width: 3.5rem;
         height: 2.5rem;
-        margin: 1rem 0rem 0rem 3rem;
+        margin: 1rem 0rem 0rem 1rem;
         cursor: pointer;
     }
 
@@ -53,10 +58,9 @@ export const Container = styled.footer`
     }
 
     h1 {
-        font-size: 1.25rem;
+        font-size: 20px;
         margin: 1.5rem 5rem 0rem auto;
         font-weight: bold;
-
     }
     
 @media screen and (max-width:430px) {
@@ -90,15 +94,11 @@ export const Container = styled.footer`
         height: 3rem;
         margin: 3.2rem 0rem 0rem 0.2rem;
     }
+
     .img4 {
         width: 3.2rem;
         height: 3.2rem;
         margin: 3.1rem 0rem 0rem -0.3rem;
-    }
-    .img5 {
-        width: 3.5rem;
-        height: 3.5rem;
-        margin: 2.9rem 0rem 0rem -0.5rem;
     }
 
     h1 {

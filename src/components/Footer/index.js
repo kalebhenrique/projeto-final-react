@@ -3,17 +3,15 @@ import Gmail from '../../assets/Gmail.png'
 import Github from '../../assets/Github.png'
 import Facebook from '../../assets/Facebook.png'
 import Instagram from '../../assets/Instagram.png'
-import Twitter from '../../assets/Twitter.png'
 
 const Footer = () => {
     return(
         <Container>
-                <p>Sobre nós</p>
-                <img src={Gmail} class='img1' alt='Gmail'/>
-                <img src={Github} class='img2' alt='Github'/>
-                <img src={Facebook} class='img3' alt='Facebook'/>
-                <img src={Instagram} class='img4' alt='Instagram'/>
-                <img src={Twitter} class='img5' alt='Twitter'/>
+                <a href='#'><p>Sobre nós</p></a>
+                <a href='#'><img src={Gmail} class='img1' alt='Gmail'/></a>
+                <a href='#'><img src={Github} class='img2' alt='Github'/></a>
+                <a href='#'><img src={Facebook} class='img3' alt='Facebook'/></a>
+                <a href='#'><img src={Instagram} class='img4' alt='Instagram'/></a>
                 <h1>Copyright © 2022 -   Caneta Azul LTDA</h1>
         </Container>
     )

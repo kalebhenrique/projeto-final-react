@@ -2,6 +2,7 @@ import { Container } from './styles.js'
 import Logo from '../../assets/Logo.png'
 import Carrinho from '../../assets/Carrinho.png'
 import Menu from '../Menu/index.js'
+import EnterProfile from '../EnterProfile/index.js'
 
 const Header = () => {
     return(
@@ -32,16 +33,13 @@ const Header = () => {
                             </a>
                         </th>
                         <th>0</th>
-                        <th>
-                            <a href='#'>Entrar</a>
-                            <a href='#'>Criar conta</a>
-                        </th>
                     </tr>
                     <tr>
                         <td>Carrinho</td>
                     </tr>
                 </table>
             </section>
+            <EnterProfile/>
         </Container>
     )
 }
