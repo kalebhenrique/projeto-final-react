@@ -7,27 +7,19 @@ import EnterProfile from '../EnterProfile/index.js'
 const Header = () => {
     return(
         <Container>
-            <section class='logo'>
+            <div class='logo'>
                 <a href='#'>
                     <img src={Logo} alt='logo site'/>
                 </a>
-            </section>
+            </div>
             <Menu/>
-            <section class='profile_space'>
-                <table>
-                    <tr>
-                        <th>
-                            <a href="">
-                                <img src={Carrinho} alt='carrinho'/>
-                            </a>
-                        </th>
-                        <th>0</th>
-                    </tr>
-                    <tr>
-                        <td>Carrinho</td>
-                    </tr>
-                </table>
-            </section>
+            <div class='cart'>
+                <a href="">
+                    <img src={Carrinho} alt='carrinho'/>
+                </a>
+                <b>0</b><br/>
+                Carrinho
+            </div>
             <EnterProfile/>
         </Container>
     )

@@ -12,8 +12,9 @@ export const Container = styled.section`
         font-weight: bold;
     }
 
-    div {
+    & > div {
         display : flex;
         flex-direction: row;
+        overflow: scroll;
     }
 `
