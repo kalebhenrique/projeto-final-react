@@ -7,6 +7,7 @@ const Menu = () => {
             <Input/>
             <table>
                 <tr>
+                    <th><a href="#">Todos</a></th>
                     <th><a href="#">Materiais</a></th>
                     <th><a href="#">Cadernos</a></th>
                     <th><a href="#">Mochilas</a></th>

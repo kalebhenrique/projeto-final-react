@@ -7,28 +7,8 @@ export const Container = styled.header`
     display: flex;
     margin-bottom: 1rem;
 
-    .logo a {
-        text-decoration: none;
-        color: #FFC700;
-    }
-    .logo a:hover {
-        text-decoration: underline;
-    }
-
     .logo {
         margin: 0 2rem 1rem 1rem;
-        color: #FFC700;
-        align-items: center;
-        font-size: 1.563rem;
-        font-weight: bold;
-        cursor: pointer;
-        text-decoration: none;
-    }
-
-    .logo img {
-        max-width: 6.938rem;
-        height: 7.5rem; 
-        cursor: pointer;
     }
 
     .profile_space {
