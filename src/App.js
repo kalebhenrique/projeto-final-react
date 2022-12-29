@@ -1,13 +1,13 @@
 import { BrowserRouter } from 'react-router-dom';
 import Footer from './components/Footer';
-import Navbar from './components/Navbar';
+import Header from './components/Header';
 import './global.css'
 import MyRoutes from './routes';
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar/>
+      <Header/>
       <MyRoutes/>
       <Footer/>
     </BrowserRouter>
