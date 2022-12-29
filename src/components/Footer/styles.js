@@ -6,7 +6,7 @@ export const Container = styled.footer`
     height: 4.5rem;
     display: flex;
 
-    p {
+    p { 
         font-size: 1.25rem;
         font-weight: bold;
         margin: 1.5rem 0rem 0rem 2rem;
@@ -54,8 +54,9 @@ export const Container = styled.footer`
 
     h1 {
         font-size: 1.25rem;
-        margin: 1.5rem 0rem 0rem 60rem;
+        margin: 1.5rem 5rem 0rem auto;
         font-weight: bold;
+
     }
     
 @media screen and (max-width:430px) {
@@ -75,7 +76,7 @@ export const Container = styled.footer`
     .img1 {
         width: 2.5rem;
         height: 2rem;
-        margin: 3.5rem 0rem 0rem -9.5rem;
+        margin: 3.5rem 0rem 0rem -9rem;
     }
 
     .img2 {
