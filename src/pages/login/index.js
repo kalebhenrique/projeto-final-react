@@ -1,12 +1,14 @@
 import { useState } from 'react';
-import { Container } from "./styles"
+import Logo from '../../assets/logo.png'
+import { FormBox } from '../../components/FormBox';
 
 const LoginPage = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     return(
-        <Container>
+        <FormBox>
+            <a href="/"><img src={Logo}/></a>
             <h1>Entrar</h1>
             <div>
                 <p>Email</p>
@@ -15,7 +17,7 @@ const LoginPage = () => {
                 <input onChangeFunction={setPassword} type='password' />
                 <button type='button'>Entrar</button>
             </div>
-        </Container>
+        </FormBox>
     )
 }
 
