@@ -1,5 +1,6 @@
 import { Container } from './styles.js'
 import PlaceholderProfilePic from '../../assets/placeholder_profile_pic.png'
+import { Link } from 'react-router-dom'
 
 const EnterProfile = () => {
     return(
@@ -7,15 +8,15 @@ const EnterProfile = () => {
             <ul>
                 <li>
                     <th>
-                        <a href='/login'>Entrar</a>
+                        <Link to='/login'>Entrar</Link>
                     </th>
                     <th>
-                        <a href='/register'>Criar conta</a>
+                        <Link to='/register'>Criar conta</Link>
                     </th>
                 </li>
             </ul>
             {/* <div class="quick_profile">
-                <a href="">
+                <Link to="">
                         <ul>
                             <li>
                                 <th>
@@ -28,7 +29,7 @@ const EnterProfile = () => {
                                 </th>
                             </li>
                         </ul>
-                    </a>
+                    </Link>
                 </div> */}
         </Container>
     )

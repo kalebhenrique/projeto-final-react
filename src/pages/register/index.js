@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo.png'
 import { FormBox } from '../../components/FormBox';
 
@@ -11,7 +12,7 @@ const RegisterPage = () => {
 
     return(
         <FormBox>
-            <a href="/"><img src={Logo}/></a>
+            <Link to="/"><img src={Logo}/></Link>
             <h1>Criar conta</h1>
             <div>
                 <p>Nome de usuário</p>

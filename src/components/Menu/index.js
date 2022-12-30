@@ -1,5 +1,6 @@
 import { Container } from './styles.js'
 import Input from '../Input/index.js'
+import { Link } from 'react-router-dom'
 
 const Menu = () => {
     return(
@@ -8,10 +9,10 @@ const Menu = () => {
             <div class="menu">
                 <ul>
                     <li>
-                        <th><a href="#">Todos</a></th>
-                        <th><a href="#">Materiais</a></th>
-                        <th><a href="#">Cadernos</a></th>
-                        <th><a href="#">Mochilas</a></th>
+                        <th><Link to="/login">Todos</Link></th>
+                        <th><Link to="/login">Materiais</Link></th>
+                        <th><Link to="/login">Cadernos</Link></th>
+                        <th><Link to="/login">Mochilas</Link></th>
                     </li>
                 </ul> 
             </div>             

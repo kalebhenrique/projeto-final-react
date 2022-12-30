@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo.png'
 import { FormBox } from '../../components/FormBox';
 
@@ -8,7 +9,7 @@ const LoginPage = () => {
 
     return(
         <FormBox>
-            <a href="/"><img src={Logo}/></a>
+            <Link to="/"><img src={Logo}/></Link>
             <h1>Entrar</h1>
             <div>
                 <p>Email</p>
