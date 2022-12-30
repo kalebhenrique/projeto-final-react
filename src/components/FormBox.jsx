@@ -62,4 +62,8 @@ export const FormBox = styled.form`
         font-size: 30px; 
         color: white;
     }
+
+    button:active {
+        background: #0e85b8;
+    }
 `
