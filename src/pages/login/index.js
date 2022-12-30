@@ -9,9 +9,9 @@ const LoginPage = () => {
         <Container>
             <h1>Entrar</h1>
             <div>
-                <h3>Email</h3>
+                <p>Email</p>
                 <input onChangeFunction={setEmail} />
-                <h3>Senha</h3>
+                <p>Senha</p>
                 <input onChangeFunction={setPassword} type='password' />
                 <button type='button'>Entrar</button>
             </div>
