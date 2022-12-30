@@ -1,18 +1,35 @@
 import { Container } from './styles.js'
+import PlaceholderProfilePic from '../../assets/placeholder_profile_pic.png'
 
 const EnterProfile = () => {
     return(
         <Container>
-            <table>
-                <tr>
+            {/* <ul>
+                <li>
                     <th>
                         <a href='#'>Entrar</a>
                     </th>
                     <th>
                         <a href='#'>Criar conta</a>
                     </th>
-                </tr>
-            </table>
+                </li>
+            </ul> */}
+            <div class="quick_profile">
+                <a href="">
+                        <ul>
+                            <li>
+                                <th>
+                                    <img src={PlaceholderProfilePic} alt='foto de perfil vazia'/>
+                                </th>
+                            </li>
+                            <li>
+                                <th>
+                                    <b>Bem vindo, Bernardo</b>
+                                </th>
+                            </li>
+                        </ul>
+                    </a>
+                </div>
         </Container>
     )
 }

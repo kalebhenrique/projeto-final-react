@@ -1,6 +1,10 @@
+import Categories from '../../components/Categories/index.js'
+
 const ProductPage = () => {
     return(
-        <h1>teste</h1>
+        <>
+            <Categories/>
+        </>
     )
 }
 
