@@ -68,6 +68,10 @@ export const Container = styled.header`
         width: 120px;
         height: 60px;
     }
+
+    b {
+        display: none;
+    }
 }
 
 @media screen and (max-width:600px) {
@@ -79,8 +83,5 @@ export const Container = styled.header`
         margin: 2.3rem auto 1rem 1.5rem;
     }
 
-    b {
-        display: none;
-    }
 }
 `

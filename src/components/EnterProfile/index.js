@@ -4,17 +4,17 @@ import PlaceholderProfilePic from '../../assets/placeholder_profile_pic.png'
 const EnterProfile = () => {
     return(
         <Container>
-            {/* <ul>
+            <ul>
                 <li>
                     <th>
-                        <a href='#'>Entrar</a>
+                        <a href='/login'>Entrar</a>
                     </th>
                     <th>
-                        <a href='#'>Criar conta</a>
+                        <a href='/register'>Criar conta</a>
                     </th>
                 </li>
-            </ul> */}
-            <div class="quick_profile">
+            </ul>
+            {/* <div class="quick_profile">
                 <a href="">
                         <ul>
                             <li>
@@ -29,7 +29,7 @@ const EnterProfile = () => {
                             </li>
                         </ul>
                     </a>
-                </div>
+                </div> */}
         </Container>
     )
 }
