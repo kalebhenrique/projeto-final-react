@@ -8,10 +8,10 @@ const Footer = () => {
     return(
         <Container>
                 <a href='#'><p>Sobre nós</p></a>
-                <a href='#'><img src={Gmail} class='img1' alt='Gmail'/></a>
-                <a href='#'><img src={Github} class='img2' alt='Github'/></a>
-                <a href='#'><img src={Facebook} class='img3' alt='Facebook'/></a>
-                <a href='#'><img src={Instagram} class='img4' alt='Instagram'/></a>
+                <a href='#'><img src={Gmail} class='gmail_icon' alt='Gmail'/></a>
+                <a href='#'><img src={Github} class='github_icon' alt='Github'/></a>
+                <a href='#'><img src={Facebook} class='facebook_icon' alt='Facebook'/></a>
+                <a href='#'><img src={Instagram} class='instagram_icon' alt='Instagram'/></a>
                 <h1>Copyright © 2022 -   Caneta Azul LTDA</h1>
         </Container>
     )
