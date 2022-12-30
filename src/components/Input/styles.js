@@ -6,8 +6,9 @@ export const Container = styled.section`
     display: flex;
 
     input {
+        width: 30rem;
         border: none;
-        font-size: 1.5rem;
+        font-size: 1rem;
         padding: 0 2.625rem;
     }
 

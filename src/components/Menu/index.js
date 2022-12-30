@@ -5,13 +5,16 @@ const Menu = () => {
     return(
         <Container>
             <Input/>
-            <table>
-                <tr>
-                    <th><a href="#">Materiais</a></th>
-                    <th><a href="#">Cadernos</a></th>
-                    <th><a href="#">Mochilas</a></th>
-                </tr>
-            </table>              
+            <div class="menu">
+                <ul>
+                    <li>
+                        <th><a href="#">Todos</a></th>
+                        <th><a href="#">Materiais</a></th>
+                        <th><a href="#">Cadernos</a></th>
+                        <th><a href="#">Mochilas</a></th>
+                    </li>
+                </ul> 
+            </div>             
         </Container>
     )
 }
