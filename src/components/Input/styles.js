@@ -26,4 +26,20 @@ export const Container = styled.section`
         width: 31px;
         height: 31px;
     }
+
+@media screen and (max-width:986px) {
+
+    input {
+        width: 15rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width:720px) {
+
+    input {
+        width: 10rem;
+        font-size: 0.78rem;
+    }
+}
 `

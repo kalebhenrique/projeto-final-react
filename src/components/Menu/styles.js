@@ -28,4 +28,31 @@ export const Container = styled.section`
     a:hover {
         text-decoration: underline;
     }
+
+@media screen and (max-width:986px) {  
+    .menu {
+        margin-top: -0.5rem;
+        margin-left: -3.2rem;
+    }
+
+    th {
+        font-size: 0.78rem;
+    }
+
+    a {
+        margin: 0 0.2rem
+    }
+}
+
+@media screen and (max-width:720px) {
+
+    th {
+        padding: 4px;
+        font-size: 0.7rem;
+    }
+
+    a {
+        margin: 0 0.1rem
+    }
+}
 `

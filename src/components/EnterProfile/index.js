@@ -24,7 +24,7 @@ const EnterProfile = () => {
                             </li>
                             <li>
                                 <th>
-                                    Bem vindo, Bernardo
+                                    <b>Bem vindo, Bernardo</b>
                                 </th>
                             </li>
                         </ul>
