@@ -6,7 +6,7 @@ export const Container = styled.div`
     font-size: 18px;
 
     img {
-        margin: -1.27rem 0 0.5rem 3.7rem;
+        margin: -1.27rem 0 0.5rem 5rem;
     }
 
     b {
