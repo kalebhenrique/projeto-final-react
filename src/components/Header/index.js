@@ -3,20 +3,21 @@ import Logo from '../../assets/logo.png'
 import Carrinho from '../../assets/Carrinho.png'
 import Menu from '../Menu/index.js'
 import EnterProfile from '../EnterProfile/index.js'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
     return(
         <Container>
             <div class='logo'>
-                <a href='#'>
+                <Link to='/login'>
                     <img src={Logo} alt='logo site'/>
-                </a>
+                </Link>
             </div>
             <Menu/>
             <div class='cart'>
-                <a href="">
+                <Link to="">
                     <img src={Carrinho} alt='carrinho'/>
-                </a>
+                </Link>
                 <b>0</b><br/>
                 Carrinho
             </div>

@@ -6,7 +6,7 @@ export const FormBox = styled.form`
     align-items:center;
     flex-direction:column;
     margin-top: 3rem;
-    margin-bottom: 4rem;
+    margin-bottom: auto;
     width: 100%;
 
     img {
