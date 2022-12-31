@@ -12,7 +12,7 @@ const Results = () => {
                 <ProductsCard/>
                 <ProductsCard/>
             </div>
-            <div id='name'>
+            <div>
                 <h1>Apontador</h1>
                 <h1>Apontador</h1>
                 <h1>Apontador</h1>
@@ -20,7 +20,7 @@ const Results = () => {
                 <h1>Apontador</h1>
                 <h1>Apontador</h1>
             </div>
-            <div id='price'>
+            <div>
                 <h2>5 reais</h2>
                 <h2>5 reais</h2>
                 <h2>5 reais</h2>

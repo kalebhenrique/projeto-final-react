@@ -6,7 +6,7 @@ export const FormBox = styled.form`
     align-items:center;
     flex-direction:column;
     margin-top: 3rem;
-    margin-bottom: 4rem;
+    margin-bottom: auto;
     width: 100%;
 
     img {
@@ -19,7 +19,7 @@ export const FormBox = styled.form`
         padding-bottom: 20px;
         height: auto;
         border-radius: 5px;
-        border: 1px solid rgba(225, 225, 225, 0.1)
+        border: none;
     }
 
     h1 {
@@ -43,7 +43,7 @@ export const FormBox = styled.form`
         margin: 18px;
         height: 38px;
         width: 360px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: none;
         border-radius: 5px;
         background: #E9E9E9;
     }
@@ -55,7 +55,7 @@ export const FormBox = styled.form`
         width: 268px;
         background: #00B2FF;
         align-items: center;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: none;
         border-radius: 5px;
         cursor: pointer;
         font-weight: 700;

@@ -21,7 +21,7 @@ export const Container = styled.section`
         max-width: 10rem;
         display: flex;
         flex-direction: row;
-        margin: 0.5rem 1.8rem 0.1rem 1.9rem
+        margin: 0.5rem 1.6rem 0.1rem 1.6rem
     }
 
     h2 {
@@ -32,7 +32,7 @@ export const Container = styled.section`
         max-width: 10rem;
         display: flex;
         flex-direction: row;
-        margin: 0.2rem 4.1rem 2rem 3.5rem
+        margin: 0.2rem 4rem 2rem 3.5rem
     }
 
 `
