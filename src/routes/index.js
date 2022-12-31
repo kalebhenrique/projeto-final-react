@@ -4,6 +4,7 @@ import Products from '../pages/product_page/index.js'
 import LoginPage from '../pages/login/index.js'
 import RegisterPage from '../pages/register/index.js'
 import { LayoutNavbar } from '../pages/layout_navbar.js'
+import ProductInfo from '../components/ProductInfo/index.js'
 
 const MyRoutes = () => {
     return(
@@ -13,6 +14,7 @@ const MyRoutes = () => {
                 <Route path='/' element={<LayoutNavbar/>} >
                     <Route path='/' element={<Homepage/>} />
                     <Route path='/products' element={<Products/>} />
+                    <Route path='/productinfo' element={<ProductInfo/>} />
                 </Route>
             </Routes>
     )
