@@ -7,6 +7,7 @@ export const Container = styled.footer`
     height: 100%;
     display: flex;
     font-size: 20px;
+    margin-top: 4rem;
 
     p { 
         font-weight: bold;
