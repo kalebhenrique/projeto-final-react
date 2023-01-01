@@ -4,30 +4,11 @@ import { Container } from './styles.js'
 const Results = () => {
     return(
         <Container>
-            <div>
                 <ProductsCard/>
                 <ProductsCard/>
                 <ProductsCard/>
                 <ProductsCard/>
                 <ProductsCard/>
-                <ProductsCard/>
-            </div>
-            <div>
-                <h1>Apontador</h1>
-                <h1>Apontador</h1>
-                <h1>Apontador</h1>
-                <h1>Apontador</h1>
-                <h1>Apontador</h1>
-                <h1>Apontador</h1>
-            </div>
-            <div>
-                <h2>5 reais</h2>
-                <h2>5 reais</h2>
-                <h2>5 reais</h2>
-                <h2>5 reais</h2>
-                <h2>5 reais</h2>
-                <h2>5 reais</h2>
-            </div>
         </Container>
     )
 }
