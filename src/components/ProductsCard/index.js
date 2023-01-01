@@ -5,10 +5,15 @@ import { Link } from 'react-router-dom'
 const ProductsCard = () => {
     return (
         <Container>
-            <Link to='/productinfo'>
-                <div>
+            <Link to='/product'>
+                <div class='product'>
                     <img src={ Apontador } class='slide first' alt='Apontador Tilibra'/>
+                    <div class='info'>
+                        Apontador<br/>
+                        R$ 1,99
+                    </div>
                 </div>
+                
             </Link>
         </Container>
     )
