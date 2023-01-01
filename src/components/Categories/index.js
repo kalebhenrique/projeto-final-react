@@ -5,10 +5,12 @@ const Categories = () => {
     return(
         <Container>
             <p>Resultados para: materiais</p>
-            <Results/>
-            <Results/>
-            <Results/>
-            <Results/>
+            <div>
+                <Results/>
+                <Results/>
+                <Results/> 
+            </div>
+            
         </Container>
     )
 }
