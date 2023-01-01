@@ -1,9 +1,9 @@
-import Categories from '../../components/Categories/index.js'
+import ProductInfo from '../../components/ProductInfo/index.js'
 
 const ProductPage = () => {
     return(
         <>
-            <Categories/>
+            <ProductInfo/>
         </>
     )
 }

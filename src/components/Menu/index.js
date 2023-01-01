@@ -9,10 +9,10 @@ const Menu = () => {
             <div class="menu">
                 <ul>
                     <li>
-                        <th><Link to="/login">Todos</Link></th>
-                        <th><Link to="/login">Materiais</Link></th>
-                        <th><Link to="/login">Cadernos</Link></th>
-                        <th><Link to="/login">Mochilas</Link></th>
+                        <th><Link to="/">Todos</Link></th>
+                        <th><Link to="/category">Materiais</Link></th>
+                        <th><Link to="/category">Cadernos</Link></th>
+                        <th><Link to="/category">Mochilas</Link></th>
                     </li>
                 </ul> 
             </div>             

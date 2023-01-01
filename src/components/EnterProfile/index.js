@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const EnterProfile = () => {
     return(
         <Container>
-            <ul>
+            {/* <ul>
                 <li>
                     <th>
                         <Link to='/login'>Entrar</Link>
@@ -14,23 +14,23 @@ const EnterProfile = () => {
                         <Link to='/register'>Criar conta</Link>
                     </th>
                 </li>
-            </ul>
-            {/* <div class="quick_profile">
-                <Link to="">
-                        <ul>
-                            <li>
-                                <th>
-                                    <img src={PlaceholderProfilePic} alt='foto de perfil vazia'/>
-                                </th>
-                            </li>
-                            <li>
-                                <th>
-                                    <b>Bem vindo, Bernardo</b>
-                                </th>
-                            </li>
-                        </ul>
-                    </Link>
-                </div> */}
+            </ul> */}
+            <div class="quick_profile">
+                <Link to="/profile">
+                    <ul>
+                        <li>
+                            <th>
+                                <img src={PlaceholderProfilePic} alt='foto de perfil vazia'/>
+                            </th>
+                        </li>
+                        <li>
+                            <th>
+                                <b>Bem vindo, Bernardo</b>
+                            </th>
+                        </li>
+                    </ul>
+                </Link>
+            </div>
         </Container>
     )
 }
