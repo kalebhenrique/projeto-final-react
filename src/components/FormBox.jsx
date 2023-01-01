@@ -31,7 +31,6 @@ export const FormBox = styled.form`
     }
 
     p {
-        font-family: Inter, sans-serif;
         margin-left: 18px;
         margin-top: 36px;
         font-size: 20px;
@@ -65,5 +64,19 @@ export const FormBox = styled.form`
 
     button:active {
         background: #0e85b8;
+    }
+
+    /* page about_us */
+    a {
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
     }
 `
