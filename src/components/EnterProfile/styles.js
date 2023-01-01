@@ -6,6 +6,7 @@ export const Container = styled.div`
     font-size: 18px;
 
     img {
+        max-width: 50px;
         margin: -1.27rem 0 0.5rem 5rem;
     }
 
@@ -31,7 +32,7 @@ export const Container = styled.div`
     font-size: 14px;
 
     img {
-        width: 29.4px;
+        width: 39.2px;
         margin: 0 0 0.5rem 4.4rem;
     }
 }
@@ -41,19 +42,13 @@ export const Container = styled.div`
     margin-top: 2.5rem;
 
     img {
-        width: 29.4px;
-        margin: 0 0 0.5rem 3.5rem;
+        margin: 0.7rem auto 0.5rem -2rem;
     }
 }
 
 @media screen and (max-width:640px) {
     b {
         display: none;
-    }
-
-    img {
-        width: 39.2px;
-        margin: 0.7rem auto 0.5rem -2rem;;
     }
 }
 `
