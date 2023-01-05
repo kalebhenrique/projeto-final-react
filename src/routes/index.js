@@ -7,6 +7,7 @@ import ProfilePage from '../pages/profile/index.js'
 import { LayoutNavbar } from '../pages/layout_navbar.js'
 import ProductInfo from '../components/ProductInfo/index.js'
 import AboutUsPage from '../pages/about_us/index.js'
+import CartPage from '../pages/cart/index.js'
 
 const MyRoutes = () => {
     return(
@@ -19,6 +20,7 @@ const MyRoutes = () => {
                     <Route path='/product' element={<ProductInfo/>} />
                     <Route path='/profile' element={<ProfilePage/>} />
                     <Route path='/aboutus' element={<AboutUsPage/>} />
+                    <Route path='/cart' element={<CartPage/>} />
                 </Route>
             </Routes>
     )
