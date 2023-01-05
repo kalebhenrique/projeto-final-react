@@ -1,14 +1,15 @@
 import ProductsCard from "../ProductsCard/index.js"
 import { Container } from './styles.js'
 
-const Results = () => {
+const Results = ({products}) => {
     return(
         <Container>
-                <ProductsCard/>
-                <ProductsCard/>
-                <ProductsCard/>
-                <ProductsCard/>
-                <ProductsCard/>
+            {products.map((item, index) => (
+                <ProductsCard 
+                key={index} 
+                name={item.name} 
+                price_in_cents={item.price_in_cents}/>
+            ))}
         </Container>
     )
 }

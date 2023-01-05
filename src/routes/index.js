@@ -16,7 +16,7 @@ const MyRoutes = () => {
                 <Route path='/register' element={<RegisterPage/>} />
                 <Route path='/' element={<LayoutNavbar/>} >
                     <Route path='/' element={<Homepage/>} />
-                    <Route path='/category' element={<CategoryPage/>} />
+                    <Route path='/category/:id' element={<CategoryPage/>} />
                     <Route path='/product' element={<ProductInfo/>} />
                     <Route path='/profile' element={<ProfilePage/>} />
                     <Route path='/aboutus' element={<AboutUsPage/>} />
