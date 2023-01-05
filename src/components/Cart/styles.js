@@ -1,56 +1,56 @@
 import styled from 'styled-components'
 
 export const Container = styled.section`
-    display:flex;
     justify-content:center;
-    margin: 3rem auto auto auto;
+    margin: 0 auto;
     align-items:center;
-    max-width: 1180px; 
+    max-width: 1600px;
+    height: 800px;  
     background-color: white;
     border-radius: 5px;
     padding: 50px;
     font-weight: bold;
     font-size: 20px;
 
-    .carrinho__container {
-        margin: 0 auto;
-        background: white;
-        width: 1180px;
-        height: 858px;
-        border: 1px solid rgba(225,225,225,0.1);
-        border-radius: 2px; 
-    }
-
-    .tittle__container {
+    h1 {
+        display: flex;
         margin-left: 128px;
-        margin-top: 100px;
         font-family: 'Inter';
-        font-weight: 700;
-        font-size: 18px;
-        border-bottom: 2px solid #000;
-        line-height: 0;
-        display: inline-block;
+        border-bottom: 2px solid;
+        width: 184px
     }
 
+    .product_box{
+        width: 1500px;
+        height: 350px;
+        display: flex;
+        flex-direction: row;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        border-radius: 0;
+    }
+    
     .image_box {
-        border: solid 1px;
-        width: 290px;
+        margin-left: 110px;
+        margin-top: 20px;
+        border: solid 2px;
+        width: 300px;
         height: 290px;
         text-align: center;
         background: white;
-        margin-left: 127px;
-        margin-top: 50px;
     }
 
     img {
+        margin: auto;
         max-width: 270px;
         max-height: 270px;
     }
 
-    .product_container {
+    div {
         display: flex;
-        margin: 10px;
-        width: 360px;
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 260px;
         border: none;
         border-radius: 5px;
         flex-direction: column;
@@ -59,23 +59,57 @@ export const Container = styled.section`
 
     .name_box {
         background: #E9E9E9;
-        border-radius: 5px;
         font-size: 30px;
-        width: 263px;
-        height: 50px;
-        margin-left: 450px;
-        margin-top: 0px;
-        line-height: 50px;
-        text-align: left
     }
 
     .quantity_box {
         background: #E9E9E9;
         flex-direction: row;
-        width: 192px;
-        height: 44px;
-        margin-top: 10px;
-        text-align:center;
-        line-height: 44px;
+        width: 170px;
+        margin-top: 40px;
+        font-size: 20px;
+    }
+
+    .price_box {
+        margin-top: 80px;
+        margin-left: 500px;
+        background: #E9E9E9;
+        font-size: 30px;
+        width: 110px;
+        height: 60px;
+        justify-content:center;
+    }
+    
+    .total__container {
+        margin-left: 1000px;
+    }
+
+    .totalprice_box {
+        margin-top: 30px;
+        width: 310px;
+        height: 60px;
+        background: #E9E9E9;
+        font-size: 25px;
+        align-items: left;
+        justify-content: center;
+    }
+
+    button {
+        display: grid;
+        margin: 10px;
+        height: 61px;
+        width: 360px;
+        background: #00B2FF;
+        align-items: center;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 30px; 
+        color: white;
+    }
+
+    button:active {
+        background: #0e85b8;
     }
 `
