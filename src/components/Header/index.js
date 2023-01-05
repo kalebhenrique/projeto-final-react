@@ -15,7 +15,7 @@ const Header = () => {
             </div>
             <Menu/>
             <div class='cart'>
-                <Link to="">
+                <Link to="/cart">
                     <img src={Carrinho} alt='carrinho'/>
                 </Link>
                 <b>0</b><br/>
