@@ -26,8 +26,16 @@ export const Container = styled.div`
         text-align: center;
         border-top: solid 2px black;
         font-weight: bold;
+        height: 80px;
+        font-size: 14px;
         background-color: #E9E9E9;
         padding: 0.1rem 0 0.1rem 0;
+        text-overflow: ellipsis;
+    }
+
+    .info p {
+        font-size: 16px;
+        justify-content: center;
     }
     
     img {
