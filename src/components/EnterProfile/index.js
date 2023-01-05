@@ -15,7 +15,7 @@ const EnterProfile = () => {
                     </th>
                 </li>
             </ul> */}
-            <div class="quick_profile">
+            <div className="quick_profile">
                 <Link to="/profile">
                     <ul>
                         <li>

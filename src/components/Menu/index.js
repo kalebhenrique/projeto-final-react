@@ -6,13 +6,13 @@ const Menu = () => {
     return(
         <Container>
             <Input/>
-            <div class="menu">
+            <div className="menu">
                 <ul>
                     <li>
                         <th><Link to="/">Todos</Link></th>
-                        <th><Link to="/category">Materiais</Link></th>
-                        <th><Link to="/category">Cadernos</Link></th>
-                        <th><Link to="/category">Mochilas</Link></th>
+                        <th><Link to="/category/1">Materiais</Link></th>
+                        <th><Link to="/category/2">Cadernos</Link></th>
+                        <th><Link to="/category/3">Mochilas</Link></th>
                     </li>
                 </ul> 
             </div>             

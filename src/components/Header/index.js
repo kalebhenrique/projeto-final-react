@@ -8,13 +8,13 @@ import { Link } from 'react-router-dom'
 const Header = () => {
     return(
         <Container>
-            <div class='logo'>
+            <div className='logo'>
                 <Link to='/'>
                     <img src={Logo} alt='logo site'/>
                 </Link>
             </div>
             <Menu/>
-            <div class='cart'>
+            <div className='cart'>
                 <Link to="/cart">
                     <img src={Carrinho} alt='carrinho'/>
                 </Link>

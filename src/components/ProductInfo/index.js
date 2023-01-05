@@ -4,18 +4,18 @@ import Apontador from '../../assets/Apontador.jpg'
 export const ProductInfo = () => {
   return (
         <Container>
-          <div class='image_box'>
+          <div className='image_box'>
             <img src={ Apontador }/>
           </div>
           <div>
-            <div class='name_box'>
+            <div className='name_box'>
               Apontador<br/>
               <b>R$ 1,99</b>
             </div>
-            <div class='description_box'>
+            <div className='description_box'>
               Apontador Amarelo Tilibra
             </div>
-            <div class="quantity_box">
+            <div className="quantity_box">
               <label for="product">Quantidade:</label>
               <select name="product">
                 <option value="1" selected> 1 </option>

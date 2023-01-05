@@ -9,10 +9,10 @@ const Data = () => {
         <Container>
             <div>
                 <Link to=''>
-                    <img src={ PlaceholderProfilePic } class='profile_pic' alt='perfil sem foto'/>
+                    <img src={ PlaceholderProfilePic } className='profile_pic' alt='perfil sem foto'/>
                 </Link>
-                <div class='info'>
-                    <div class='column'>
+                <div className='info'>
+                    <div className='column'>
                         <h2>Bernardo Braga</h2>
                     </div> 
                     <button> 

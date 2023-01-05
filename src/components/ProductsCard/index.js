@@ -2,15 +2,15 @@ import { Container } from './styles.js'
 import Apontador from '../../assets/Apontador.jpg'
 import { Link } from 'react-router-dom'
 
-const ProductsCard = () => {
+const ProductsCard = ({name, price_in_cents}) => {
     return (
         <Container>
             <Link to='/product'>
-                <div class='product'>
-                    <img src={ Apontador } class='slide first' alt='Apontador Tilibra'/>
-                    <div class='info'>
-                        Apontador<br/>
-                        R$ 1,99
+                <div className='product'>
+                    <img src={ Apontador } className='slide first' alt='Apontador Tilibra'/>
+                    <div className='info'>
+                        <div className='name'> {`${name}`} </div>
+                        <p>R$ {`${price_in_cents/100}`}</p>
                     </div>
                 </div>
                 

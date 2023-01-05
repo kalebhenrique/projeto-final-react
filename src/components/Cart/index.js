@@ -6,14 +6,14 @@ const Cart = () => {
         <Container>
             <h1>Seus itens:</h1>
             <div className='product_box'>
-                <div class='image_box'>
+                <div className='image_box'>
                   <img src={ Apontador }/>
                 </div>
                 <div>
-                  <div class='name_box'>
+                  <div className='name_box'>
                     Apontador<br/>
                   </div>
-                  <div class="quantity_box">
+                  <div className="quantity_box">
                     <label for="product">Quantidade:</label>
                     <select name="product">
                       <option value="1" selected> 1 </option>
