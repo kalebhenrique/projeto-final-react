@@ -11,7 +11,7 @@ const AboutUsPage = () => {
                 Bernardo Braga 
             </a>
             <a href='https://github.com/jessica8melo' target="_blank" rel="noreferrer" > 
-                Jessíca Melo 
+                Jéssica Melo 
             </a>
             <a href='https://github.com/kalebhenrique' target="_blank" rel="noreferrer"> 
                 Kaleb Henrique 
