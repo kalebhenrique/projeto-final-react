@@ -13,4 +13,10 @@ export const Container = styled.section`
         margin: 8px 2rem;
         font-weight: bold;
     }
+
+    .results {
+        display : flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 `
