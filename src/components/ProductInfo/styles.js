@@ -4,7 +4,6 @@ export const Container = styled.div`
     display:flex;
     justify-content:center;
     margin: 3rem auto auto auto;
-    align-items:center;
     max-width: 800px;
     flex-direction: row;  
     background-color: white;
@@ -19,6 +18,8 @@ export const Container = styled.div`
         height: 290px;
         text-align: center;
         background: white;
+        margin-top: 26px;
+        padding: 8px;
     }
 
     img {

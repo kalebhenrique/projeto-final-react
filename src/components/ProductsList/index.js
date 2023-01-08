@@ -9,7 +9,8 @@ const ProductsList = ({products}) => {
                 {products.map((item, index) => (
                     <ProductsCard 
                     key={index} 
-                    name={item.name} 
+                    name={item.name}
+                    idProduct={item.id}
                     price_in_cents={item.price_in_cents}/>
                 ))}
             </div>

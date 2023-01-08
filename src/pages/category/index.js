@@ -29,10 +29,10 @@ const CategoryPage = () => {
             <div className='results'>   
                 {products.map((item, index) => (
                     <ProductsCard
-                    key={index} 
+                    key={index}
+                    idProduct={item.id} 
                     name={item.name} 
-                    price_in_cents={item.price_in_cents}
-                    category={item.category}/>
+                    price_in_cents={item.price_in_cents}/>
                 ))}
             </div>
         </Container>
