@@ -28,6 +28,11 @@ export const Container = styled.div`
         max-height: 270px;
     }
 
+    b {
+        margin-top: 10px;
+        color: #00B2FF;
+    }
+
     div {
         display: flex;
         margin: 10px;
