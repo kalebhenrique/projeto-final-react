@@ -8,6 +8,7 @@ import { LayoutNavbar } from '../pages/layout_navbar.js'
 import ProductInfo from '../components/ProductInfo/index.js'
 import AboutUsPage from '../pages/about_us/index.js'
 import CartPage from '../pages/cart/index.js'
+import NotFound from '../pages/not_found/index.js'
 
 const MyRoutes = () => {
     return(
@@ -21,6 +22,7 @@ const MyRoutes = () => {
                     <Route path='/profile' element={<ProfilePage/>} />
                     <Route path='/aboutus' element={<AboutUsPage/>} />
                     <Route path='/cart' element={<CartPage/>} />
+                    <Route path='*' element={<NotFound/> } />
                 </Route>
             </Routes>
     )
