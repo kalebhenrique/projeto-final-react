@@ -7,26 +7,26 @@ const EnterProfile = () => {
         <Container>
             {/* <ul>
                 <li>
-                    <th>
+                    <div>
                         <Link to='/login'>Entrar</Link>
-                    </th>
-                    <th>
+                    </div>
+                    <div>
                         <Link to='/register'>Criar conta</Link>
-                    </th>
+                    </div>
                 </li>
             </ul> */}
             <div className="quick_profile">
                 <Link to="/profile">
                     <ul>
                         <li>
-                            <th>
+                            <div>
                                 <img src={PlaceholderProfilePic} alt='foto de perfil vazia'/>
-                            </th>
+                            </div>
                         </li>
                         <li>
-                            <th>
+                            <div>
                                 <b>Bem vindo, Bernardo</b>
-                            </th>
+                            </div>
                         </li>
                     </ul>
                 </Link>

@@ -17,9 +17,9 @@ const Header = () => {
             <div className='cart'>
                 <Link to="/cart">
                     <img src={Carrinho} alt='carrinho'/>
-                </Link>
                 <b>0</b><br/>
                 Carrinho
+                </Link>
             </div>
             <EnterProfile/>
         </Container>

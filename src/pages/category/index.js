@@ -26,7 +26,7 @@ const CategoryPage = () => {
     return (
         <Container>
             <p>Buscar por: { categoryName }</p>
-            <div class='results'>   
+            <div className='results'>   
                 {products.map((item, index) => (
                     <ProductsCard
                     key={index} 

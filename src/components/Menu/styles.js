@@ -6,7 +6,7 @@ export const Container = styled.section`
     text-decoration: none;
 
     .menu {
-        margin-top: -1rem;
+        margin-top: -0.3rem;
         margin-left: -1.5rem;
     }
 
@@ -14,9 +14,10 @@ export const Container = styled.section`
         list-style-type: none;
     }
 
-    th {
+    span {
         padding: 10px;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        font-weight: bold;
     }
 
     a {

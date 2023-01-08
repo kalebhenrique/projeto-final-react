@@ -11,6 +11,11 @@ export const Container = styled.header`
         list-style-type: none;
     }
 
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
     .logo {
         margin: 0 2rem 1rem 1rem;
     }
