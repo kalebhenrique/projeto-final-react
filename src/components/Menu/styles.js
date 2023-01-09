@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.section`
+export const Container = styled.nav`
     margin: 2rem auto 1rem auto;
     align-items: center;
     text-decoration: none;
