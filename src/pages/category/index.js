@@ -32,7 +32,8 @@ const CategoryPage = () => {
                     key={index}
                     idProduct={item.id} 
                     name={item.name} 
-                    price_in_cents={item.price_in_cents}/>
+                    price_in_cents={item.price_in_cents}
+                    images={item.images}/>
                 ))}
             </div>
         </Container>

@@ -1,15 +1,14 @@
 import { Container } from './styles.js'
-import Apontador from '../../assets/Apontador.jpg'
 import { Link } from 'react-router-dom'
 
-const ProductsCard = ({idProduct, name, price_in_cents}) => {
-    const id = '/product/'
+const ProductsCard = ({idProduct, name, price_in_cents, images_url}) => {
+    console.log(images_url) // undefined
 
     return (
         <Container>
-            <Link to={ id + idProduct }>
+            <Link to={`/product/${idProduct}`}>
                 <div className='product'>
-                    <img src={ Apontador } className='slide first' alt='Apontador Tilibra'/>
+                    <img src={`http://localhost:3001/${images_url}`} className='slide first' alt='imagem do produto'/>
                     <div className='info'>
                         <div className='name'> {`${name}`} </div>
                         <p>
