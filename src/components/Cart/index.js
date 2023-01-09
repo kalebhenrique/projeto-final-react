@@ -1,5 +1,4 @@
 import { Container } from './styles.js'
-import Apontador from '../../assets/Apontador.jpg'
 
 const Cart = () => {
     return (
@@ -7,7 +6,7 @@ const Cart = () => {
             <h1>Seus itens:</h1>
             <div className='product_box'>
                 <div className='image_box'>
-                  <img src={ Apontador }/>
+                  <img src=''/>
                 </div>
                 <div>
                   <div className='name_box'>
