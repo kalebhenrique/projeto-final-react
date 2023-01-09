@@ -8,6 +8,36 @@ export const Container = styled.section`
     height: auto;
     padding: 4rem;
     
+    .logout {
+        text-decoration: none;
+        text-align: right;
+        font-size: 18px;
+        color: red;
+    }
+
+    .logout:hover {
+        color: rgb(157, 11, 11);
+        text-decoration: underline;
+    }
+    
+    .admin_space {
+        background: #00B2FF;
+        align-items: center;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        color: white;
+        padding: 6px;
+        height: 2.3rem;
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .admin_space:hover {
+        background: #0e85b8;
+    }
+
     .info {
         margin-left: 70px;
     }
