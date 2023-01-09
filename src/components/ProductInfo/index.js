@@ -1,11 +1,10 @@
 import { Container } from './styles.js'
-import Apontador from '../../assets/Apontador.jpg'
 
 export const ProductInfo = (products) => {
   return (
         <Container>
             <div className='image_box'>
-                <img src={ Apontador } alt='imagem do produto'/>
+            <img src={`http://localhost:3001/${products.images_url}`} className='slide first' alt='imagem do produto'/>
             </div>
             <div>
                 <div className='name_box'>

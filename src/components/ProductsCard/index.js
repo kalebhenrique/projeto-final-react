@@ -2,8 +2,6 @@ import { Container } from './styles.js'
 import { Link } from 'react-router-dom'
 
 const ProductsCard = ({idProduct, name, price_in_cents, images_url}) => {
-    console.log(images_url) // undefined
-
     return (
         <Container>
             <Link to={`/product/${idProduct}`}>

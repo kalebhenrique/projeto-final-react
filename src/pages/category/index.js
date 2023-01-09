@@ -33,7 +33,7 @@ const CategoryPage = () => {
                     idProduct={item.id} 
                     name={item.name} 
                     price_in_cents={item.price_in_cents}
-                    images={item.images}/>
+                    images_url={item.images_url}/>
                 ))}
             </div>
         </Container>

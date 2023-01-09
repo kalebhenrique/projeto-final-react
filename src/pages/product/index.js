@@ -25,7 +25,8 @@ const ProductPage = () => {
                 price_in_cents={products.price_in_cents}
                 description={products.description}
                 category={products.category.name}
-                brand={products.brand.name}/>
+                brand={products.brand.name}
+                images_url={products.images_url}/>
             }
         </>
     )

@@ -20,7 +20,7 @@ const Homepage = () => {
                     name={item.name}
                     idProduct={item.id}
                     price_in_cents={item.price_in_cents}
-                    images={item.images_url}/>
+                    images_url={item.images_url}/>
                 ))}
             </div>
         </Container>
