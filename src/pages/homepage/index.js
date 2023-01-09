@@ -1,6 +1,7 @@
-import ProductsList from "../../components/ProductsList/index.js"
 import { useState, useEffect } from 'react';
+import ProductsCard from '../../components/ProductsCard';
 import { api } from '../../services/api';
+import { Container } from './styles';
 
 const Homepage = () => {
     const [products, setProducts] = useState([])
@@ -10,11 +11,19 @@ const Homepage = () => {
     }, [])
 
     return(
-        <>
-            <ProductsList products={products}/>
-            <ProductsList products={products}/>
-            <ProductsList products={products}/>
-        </>
+        <Container>
+            <p>Todos os produtos</p>
+            <div className='products_list'>
+                {products.map((item, index) => (
+                    <ProductsCard
+                    key={index} 
+                    name={item.name}
+                    idProduct={item.id}
+                    price_in_cents={item.price_in_cents}
+                    images={item.images_url}/>
+                ))}
+            </div>
+        </Container>
     )
 }
 

@@ -14,9 +14,10 @@ export const Container = styled.section`
         font-weight: bold;
     }
 
-    & > div {
+    .products_list {
         display : flex;
         flex-direction: row;
-        overflow: scroll;
+        flex-wrap: wrap;
     }
+    
 `
