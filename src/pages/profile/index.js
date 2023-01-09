@@ -14,8 +14,17 @@ const ProfilePage = () => {
                 <div className='info'>
                     <div className='column'>
                         <h2>Bernardo Braga</h2>
-                        <Link to='/logout' className='logout'>Sair</Link>
-                        <Link to='/admin' className='admin_space'>Espaço do Administrador</Link>
+                        <div className='logout'><Link to='/logout'>Sair</Link></div>
+                        <ul className="menu">
+                            <li><p className='admin_space'>Espaço do Administrador</p>
+                                <ul>
+                                    <li><Link to='/admin_products'>Produtos</Link></li>
+                                    <li><Link to='/admin_brands'>Marcas</Link></li>
+                                    <li><Link to='/admin_categories'>Categorias</Link></li>
+                                    <li><Link to='/admin_users'>Usuários</Link></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div> 
                     <button> 
                         <img src={ EditPencil } alt='editar nome'/> 

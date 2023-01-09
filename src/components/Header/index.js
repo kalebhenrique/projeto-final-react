@@ -14,13 +14,14 @@ const Header = () => {
                 </Link>
             </div>
             <Menu/>
-            <div className='cart'>
-                <Link to="/cart">
-                    <img src={Carrinho} alt='carrinho'/>
-                <b>0</b><br/>
-                Carrinho
-                </Link>
-            </div>
+            <Link to="/cart">
+                <div className='cart'>
+                    
+                        <img src={Carrinho} alt='carrinho'/>
+                    <b>0</b><br/>
+                    Carrinho
+                </div>    
+            </Link>
             <EnterProfile/>
         </Container>
     )

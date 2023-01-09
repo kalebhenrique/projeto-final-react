@@ -9,13 +9,17 @@ export const Container = styled.section`
     padding: 4rem;
     
     .logout {
+        margin-left: 90%;
+    }
+
+    .logout a {
         text-decoration: none;
         text-align: right;
         font-size: 18px;
         color: red;
     }
 
-    .logout:hover {
+    .logout:hover  a{
         color: rgb(157, 11, 11);
         text-decoration: underline;
     }
@@ -28,14 +32,9 @@ export const Container = styled.section`
         text-decoration: none;
         color: white;
         padding: 6px;
-        height: 2.3rem;
-        margin-top: 20px;
-        font-size: 20px;
+        height: auto;
+        font-size: 18px;
         font-weight: bold;
-    }
-
-    .admin_space:hover {
-        background: #0e85b8;
     }
 
     .info {
@@ -82,4 +81,41 @@ export const Container = styled.section`
         width: auto;
         background-color: #E9E9E9;
     }
+
+    .menu{
+        list-style:none;
+        width: 100%;
+    }
+
+    .menu li{
+        position:relative;
+    }
+
+    .menu li a{
+        color: white;
+        text-decoration: none; 
+        padding: 5px 10px; 
+        display: block;
+        background-color: #00B2FF;
+    }
+
+    .menu li a:hover{
+        background: #0e85b8;
+        color: white;
+    }
+
+    .menu li  ul{
+        position: absolute;
+        display: none;
+        margin-top: -18px;
+    }
+
+    .menu li:hover ul, .menu li.hover ul{display: block;}
+
+    .menu li ul li{
+        border: 0.5px solid white;
+        display: block;
+        width: 150px;
+    }
+
 `
