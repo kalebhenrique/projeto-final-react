@@ -15,7 +15,7 @@ const AdminProductsCreate = () => {
     const createProduct = async (e) => {
         e.preventDefault();
         if (name && priceInCents && description && category_id && brand_id && inventory) {
-            await api.post('products/create', {
+            await api.post('/products/create', {
             name,
             priceInCents,
             description,
@@ -31,7 +31,7 @@ const AdminProductsCreate = () => {
 
     return (
         <FormBox>
-            <Link to='/admin_products'>&#60;&#60; Voltar</Link>
+            <Link to='/adminproducts'>&#60;&#60; Voltar</Link>
             <h1>Criar Produto</h1>
             
             <form onSubmit={createProduct}>

@@ -28,7 +28,7 @@ const AdminProductsUpdate = () => {
     }
     return (
         <FormBox>
-            <Link to='/admin_products'>&#60;&#60; Voltar</Link>
+            <Link to='/adminproducts'>&#60;&#60; Voltar</Link>
             <h1>Atualizar Produto</h1>
             <form onSubmit={updateProduct}>
                     <input placeholder="Nome" onChange={(event) => setName(event.target.value)}></input>

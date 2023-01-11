@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ElementContainer } from './styles.js';
-import { Container } from './styles.js'
+import { ElementContainer } from '../../../components/ListCrud.jsx';
 import { api } from '../../../services/api';
 import PhotoCrud from '../../../assets/photo_crud.png';
 import EditCrud from '../../../assets/edit_crud.png';
 import DeleteCrud from '../../../assets/delete_crud.png';
+import { ListCrud } from '../../../components/ListCrud.jsx';
 
 const AdminProductsIndex = () => {
   const [products, setProducts] = useState([]);
@@ -15,17 +15,19 @@ const AdminProductsIndex = () => {
   }, [])
 
   const deleteProduct = (id) => {
-    api.delete(`/products/delete/${id}`)
-    .then((response) => alert('Produto deletado com sucesso!'))
-    .catch((error) => alert('Erro ao deletar produto!'))
+    if(window.confirm("Tem certeza que deseja apagar?")) {
+      api.delete(`/products/delete/${id}`)
+        .then((response) => alert('Produto deletado com sucesso!'))
+        .catch((error) => alert('Erro ao deletar produto!'))
+    }  
   }
 
 
   return (
-    <Container>
+    <ListCrud>
         <Link to='/profile'> &#60;&#60; Voltar à página anterior </Link>
         <h1>Index Produtos</h1>
-        <Link to='/admin_products/create'> Criar produto </Link>
+        <Link to='/adminproducts/create'> Criar produto </Link>
         <div className='products_list'>
             <ElementContainer>
                 <div className='containers'><h3> Nome </h3></div>
@@ -51,10 +53,10 @@ const AdminProductsIndex = () => {
                     <img src={`http://localhost:3001${item.images_url}`} alt='imagem do produto'/>
                   </div>
                   <div className='containers'>
-                    <Link to={`/admin_products/update/${item.id}`}>
+                    <Link to={`/adminproducts/update/${item.id}`}>
                       <img src={ EditCrud } className='options' alt='editar'/>
                     </Link>
-                    <Link to={`/admin_products/add_photo/${item.id}`}>
+                    <Link to={`/products/add_photo/${item.id}`}>
                       <img src={ PhotoCrud } className='options' alt='adicionar foto'/>
                     </Link>
                     <button type='button' onClick={() => {deleteProduct(item.id)}}>
@@ -74,7 +76,7 @@ const AdminProductsIndex = () => {
                 <div className='containers'><h3> Ações </h3></div>
             </ElementContainer>
         </div>
-    </Container>
+    </ListCrud>
   );
 }
 
