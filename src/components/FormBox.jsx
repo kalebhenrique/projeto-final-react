@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const FormBox = styled.form`
+export const FormBox = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
@@ -11,6 +11,15 @@ export const FormBox = styled.form`
 
     img {
         text-align: center;
+    }
+
+    form {
+        background-color: white;
+        width: 409px;
+        padding-bottom: 20px;
+        height: auto;
+        border-radius: 5px;
+        border: none;
     }
 
     div {
@@ -79,4 +88,8 @@ export const FormBox = styled.form`
     a:hover {
         text-decoration: underline;
     }
+`
+
+export const ElementContainer = styled.div`
+    
 `

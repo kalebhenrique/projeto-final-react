@@ -47,7 +47,7 @@ export const Container = styled.nav`
 
 @media screen and (max-width:720px) {
 
-    th {
+    span {
         padding: 4px;
         font-size: 0.7rem;
     }
