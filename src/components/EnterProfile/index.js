@@ -1,36 +1,46 @@
 import { Container } from './styles.js'
-import PlaceholderProfilePic from '../../assets/placeholder_profile_pic.png'
 import { Link } from 'react-router-dom'
+import { useUserContext } from '../../contexts/useUserContext.js'
+import { useEffect, useState } from 'react'
+import { api } from '../../services/api.js'
 
 const EnterProfile = () => {
+    const { user } = useUserContext()
+    const id = user.id
+    const [userData, setUserData] = useState('')
+    
+    useEffect (() => {
+        api.get(`/users/show/${id}`).then(response => setUserData(response.data))
+      }, [id])
+
     return(
         <Container>
-            {/* <ul>
-                <li>
-                    <div>
-                        <Link to='/login'>Entrar</Link>
-                    </div>
-                    <div>
-                        <Link to='/register'>Criar conta</Link>
-                    </div>
-                </li>
-            </ul> */}
+            {Object.keys(user).length ? (
             <div className="quick_profile">
                 <Link to="/profile">
                     <ul>
                         <li>
                             <div>
-                                <img src={PlaceholderProfilePic} alt='foto de perfil vazia'/>
+                                <img src={`http://localhost:3001${userData.profile_picture_url}`} alt='foto de perfil vazia'/>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <b>Bem vindo, Bernardo</b>
+                                <b>Bem vindo, {userData.name}</b>
                             </div>
                         </li>
                     </ul>
                 </Link>
-            </div>
+            </div>) : (
+            <ul>
+                <li>
+                    <div>
+                        <Link to='/login'>Entrar</Link>
+                        <Link to='/register'>Criar conta</Link>
+                    </div>
+                </li>
+            </ul>
+            )}
         </Container>
     )
 }

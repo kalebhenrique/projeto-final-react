@@ -7,7 +7,7 @@ export const Container = styled.div`
 
     img {
         max-width: 50px;
-        margin: -1.27rem 0 0.5rem 5rem;
+        margin-top: -0.7rem;
     }
 
     b {
@@ -18,6 +18,7 @@ export const Container = styled.div`
         margin: 0 0.8rem;
         color: black;
         text-decoration: none;
+        font-weight: bold;
     }
 
     a:hover {
@@ -26,6 +27,11 @@ export const Container = styled.div`
 
     .quick_profile {
         margin-top: -2rem;
+    }
+
+    .quick_profile a ul li {
+        text-align: center;
+        justify-content: center;
     }
 
 @media screen and (max-width:1200px) {

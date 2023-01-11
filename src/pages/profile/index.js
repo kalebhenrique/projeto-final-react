@@ -1,27 +1,37 @@
 import { Container } from './styles.js'
 import Options from '../../components/Options/index.js'
-import PlaceholderProfilePic from '../../assets/placeholder_profile_pic.png'
 import EditPencil from '../../assets/edit_pencil.png'
 import { Link } from 'react-router-dom'
+import { useUserContext } from '../../contexts/useUserContext.js'
+import { useEffect, useState } from 'react'
+import { api } from '../../services/api.js'
 
 const ProfilePage = () => {
+    const { logout, user } = useUserContext()
+    const id = user.id
+    const [userData, setUserData] = useState('')
+    
+    useEffect (() => {
+        api.get(`/users/show/${id}`).then(response => setUserData(response.data))
+      }, [id])
+
     return(
         <Container>
             <div>
                 <Link to=''>
-                    <img src={ PlaceholderProfilePic } className='profile_pic' alt='perfil sem foto'/>
+                    <img src={`http://localhost:3001${userData.profile_picture_url}`} className='profile_pic' alt='perfil sem foto'/>
                 </Link>
                 <div className='info'>
                     <div className='column'>
-                        <h2>Bernardo Braga</h2>
-                        <div className='logout'><Link to='/logout'>Sair</Link></div>
+                        <h2>{userData.name}</h2>
+                        <div className='logout' onClick={() => logout()}><Link to='/'>Sair</Link></div>
                         <ul className="menu">
                             <li><p className='admin_space'>Espaço do Administrador</p>
                                 <ul>
-                                    <li><Link to='/admin_products'>Produtos</Link></li>
-                                    <li><Link to='/admin_brands'>Marcas</Link></li>
-                                    <li><Link to='/admin_categories'>Categorias</Link></li>
-                                    <li><Link to='/admin_users'>Usuários</Link></li>
+                                    <li><Link to='/adminproducts'>Produtos</Link></li>
+                                    <li><Link to='/adminbrands'>Marcas</Link></li>
+                                    <li><Link to='/admincategories'>Categorias</Link></li>
+                                    <li><Link to='/adminusers'>Usuários</Link></li>
                                 </ul>
                             </li>
                         </ul>
