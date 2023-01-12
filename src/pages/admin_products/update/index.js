@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { FormBox } from "../../../components/FormBox";
 import { api } from "../../../services/api";
@@ -6,23 +6,38 @@ import { api } from "../../../services/api";
 const AdminProductsUpdate = () => {
     const { id } = useParams();
     const [name, setName] = useState('');
-    const [priceInCents, setPriceInCents] = useState('');
+    const [price_in_cents, setPriceInCents] = useState('');
     const [description, setDescription] = useState('');
-    const [category_id, setCategoryId] = useState('');
-    const [brand_id, setBrandId] = useState('');
     const [inventory, setInventory] = useState('');
+    const [category_id, setCategory] = useState([]);
+    const [brand_id, setBrand] = useState([]);
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        api.get(`/products/show/${id}`)
+        .then(response => {
+            setName(response.data.name)
+            setPriceInCents(response.data.price_in_cents)
+            setDescription(response.data.description)
+            setInventory(response.data.inventory)
+            setCategory(response.data.category.id)
+            setBrand(response.data.brand.id)
+            setLoading(false)
+        })
+    }, [id])
 
     const updateProduct = async () => {
-        if (name && priceInCents && description && category_id && brand_id && inventory) {
+        if (name && price_in_cents && description && category_id && brand_id && inventory) {
         await api.patch(`/products/update/${id}`, {
             name,
-            priceInCents,
+            price_in_cents,
             description,
             category_id,
             brand_id,
             inventory
-        })}
-        else {
+        })
+        alert('Produto criado com sucesso!')
+        } else {
             alert('Preencha todos os campos!')
         }
     }
@@ -30,15 +45,17 @@ const AdminProductsUpdate = () => {
         <FormBox>
             <Link to='/adminproducts'>&#60;&#60; Voltar</Link>
             <h1>Atualizar Produto</h1>
+            {loading ? <p>Carregando...</p> : (
             <form onSubmit={updateProduct}>
-                    <input placeholder="Nome" onChange={(event) => setName(event.target.value)}></input>
-                    <input placeholder="Preço" onChange={(event) => setPriceInCents(event.target.value)}></input>
-                    <input placeholder="Descrição" onChange={(event) => setDescription(event.target.value)}></input>
-                    <input placeholder="Categoria" onChange={(event) => setCategoryId(event.target.value)}></input>
-                    <input placeholder="Marca" onChange={(event) => setBrandId(event.target.value)}></input>
-                    <input placeholder="Estoque" onChange={(event) => setInventory(event.target.value)}></input>
-                    <button type="submit">Atualizar</button>
+                <input value={name} placeholder="Nome" onChange={(products) => setName(products.target.value)}/>
+                <input value={description} placeholder="Desscrição" onChange={(e) => setDescription(e.target.value)}></input>
+                <input value={inventory} placeholder="Estoque" onChange={(e) => setInventory(e.target.value)}></input>
+                <input value={price_in_cents} placeholder="Preço" onChange={(e) => setPriceInCents(e.target.value)}></input>
+                <input value={category_id} placeholder="Categoria" onChange={(e) => setCategory(e.target.value)}></input>
+                <input value={brand_id} placeholder="Marca" onChange={(e) => setBrand(e.target.value)}></input>
+                <button type="submit">Atualizar</button>
             </form>
+            )}
         </FormBox>
     );
     }
