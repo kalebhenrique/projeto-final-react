@@ -14,6 +14,7 @@ import AdminProductsCreate from '../pages/admin_products/create/index.js'
 import AdminProductsUpdate from '../pages/admin_products/update/index.js'
 import AdminUsersIndex from '../pages/admin_users/index/index.js'
 import AdminBrandsIndex from '../pages/admin_brands/index/index.js'
+import AdminProductsAddImages from '../pages/admin_products/add_images/index.js'
 
 const MyRoutes = () => {
     return(
@@ -24,6 +25,7 @@ const MyRoutes = () => {
                 <Route path='/adminproducts' element={<AdminProductsIndex/>} />
                 <Route path='/adminproducts/create' element={<AdminProductsCreate/>} />
                 <Route path='/adminproducts/update/:id' element={<AdminProductsUpdate/>} />
+                <Route path='/adminproducts/add_images/:id' element={<AdminProductsAddImages/> } />
                 <Route path='/adminusers' element={<AdminUsersIndex/>} />
                 <Route path='/' element={<LayoutNavbar/>} >
                     <Route path='/' element={<Homepage/>} />
