@@ -22,7 +22,7 @@ export const ListCrud = styled.div`
         font-size: 1rem;
     }
 
-    .products_list {
+    .list {
         display: flex;
         justify-content: center;
         flex-direction: column;

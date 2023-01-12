@@ -24,14 +24,14 @@ const AdminBrandsIndex = () => {
         <Link to='/profile'> &#60;&#60; Voltar à página anterior </Link>
         <h1>Index Marcas</h1>
         <Link to='/adminbrands/create'> Criar marca </Link>
-        <div className='products_list'>
+        <div className='list'>
             <ElementContainer>
                 <div className='containers'><h3> Id </h3></div>
                 <div className='containers'><h3> Nome </h3></div>
                 <div className='containers'><h3> Ações </h3></div>
             </ElementContainer>
             {brands.map((item, index) => (
-                <ElementContainer>
+                <ElementContainer key={index}>
                   <div className='containers'><span> {item.id} </span></div>
                   <div className='containers'><span>{item.name}</span></div>
                   <div className='containers'>

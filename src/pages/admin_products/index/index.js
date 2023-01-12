@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ElementContainer } from '../../../components/ListCrud.jsx';
 import { api } from '../../../services/api';
 import PhotoCrud from '../../../assets/photo_crud.png';
@@ -10,11 +10,6 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const AdminProductsIndex = () => {
   const [products, setProducts] = useState([]);
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-      navigate("/adminproducts");
-  }
 
   useEffect (() => {
     api.get('/products/index').then(response => setProducts(response.data))
@@ -24,7 +19,7 @@ const AdminProductsIndex = () => {
     if(window.confirm("Tem certeza que deseja apagar?")) {
       api.delete(`/products/delete/${id}`)
         .then((response) => alert('Produto deletado com sucesso!'))
-        handleClick()
+        .catch((error) => alert('Erro ao deletar produto!'))
     }  
   }
 
@@ -33,7 +28,7 @@ const AdminProductsIndex = () => {
         <Link to='/profile'> &#60;&#60; Voltar à página anterior </Link>
         <h1>Index Produtos</h1>
         <Link to='/adminproducts/create'> Criar produto </Link>
-        <div className='products_list'>
+        <div className='list'>
             <ElementContainer>
                 <div className='containers'><h3> Nome </h3></div>
                 <div className='containers'><h3> Preço </h3></div>
@@ -45,7 +40,7 @@ const AdminProductsIndex = () => {
                 <div className='containers'><h3> Ações </h3></div>
             </ElementContainer>
             {products.map((item, index) => (
-                <ElementContainer>
+                <ElementContainer key={index}>
                   <div className='containers'><span> {item.name} </span></div>
                   <div className='containers'>
                     <span> {(item.price_in_cents/100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} </span>

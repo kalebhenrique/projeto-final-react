@@ -15,13 +15,13 @@ const AdminUsersIndex = () => {
     <ListCrud>
         <Link to='/profile'> &#60;&#60; Voltar à página anterior </Link>
         <h1>Index Usuários</h1>
-        <div className='products_list'>
+        <div className='list'>
             <ElementContainer>
                 <div className='containers'><h3> Nome </h3></div>
                 <div className='containers'><h3> Permissões de Admin </h3></div>
             </ElementContainer>
             {users.map((item, index) => (
-                <ElementContainer>
+                <ElementContainer key={index}>
                   <div className='containers'><span> {item.name} </span></div>
                   <div className='containers'>
                     {
