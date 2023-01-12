@@ -35,7 +35,7 @@ const AdminBrandsIndex = () => {
                   <div className='containers'><span> {item.id} </span></div>
                   <div className='containers'><span>{item.name}</span></div>
                   <div className='containers'>
-                    <Link to={`/brands/update/${item.id}`}>
+                    <Link to={`/adminbrands/update/${item.id}`}>
                       <img src={ EditCrud } className='options' alt='editar'/>
                     </Link>
                     <button type='button' onClick={() => {deleteBrand(item.id)}}>
