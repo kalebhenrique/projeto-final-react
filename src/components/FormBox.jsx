@@ -11,6 +11,7 @@ export const FormBox = styled.div`
 
     img {
         text-align: center;
+        width: 240px;
     }
 
     form {

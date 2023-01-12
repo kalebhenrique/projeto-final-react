@@ -21,10 +21,6 @@ export const Container = styled.div`
         font-weight: bold;
     }
 
-    a:hover {
-        text-decoration: underline;
-    }
-
     .quick_profile {
         margin-top: -2rem;
     }

@@ -10,21 +10,33 @@ const ProfilePage = () => {
     const { logout, user } = useUserContext()
     const id = user.id
     const [userData, setUserData] = useState('')
+    const [loading, setLoading] = useState(true)
     
     useEffect (() => {
-        api.get(`/users/show/${id}`).then(response => setUserData(response.data))
+        api.get(`/users/show/${id}`)
+        .then(response => {
+            setUserData(response.data)
+            setLoading(false)
+        })
       }, [id])
 
     return(
         <Container>
             <div>
+                {loading && <p>Carregando...</p>}
+                {!loading &&
                 <Link to=''>
-                    <img src={`http://localhost:3001${userData.profile_picture_url}`} className='profile_pic' alt='perfil sem foto'/>
+                    <img
+                        src={`http://localhost:3001${userData.profile_picture_url}`} 
+                        alt='foto de perfl'
+                        className='profile_pic'/>
                 </Link>
+                }
                 <div className='info'>
                     <div className='column'>
                         <h2>{userData.name}</h2>
                         <div className='logout' onClick={() => logout()}><Link to='/'>Sair</Link></div>
+                        { userData.is_admin && 
                         <ul className="menu">
                             <li><p className='admin_space'>Espaço do Administrador</p>
                                 <ul>
@@ -35,6 +47,7 @@ const ProfilePage = () => {
                                 </ul>
                             </li>
                         </ul>
+                        }
                     </div> 
                     <button> 
                         <img src={ EditPencil } alt='editar nome'/> 

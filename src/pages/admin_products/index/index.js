@@ -1,14 +1,20 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ElementContainer } from '../../../components/ListCrud.jsx';
 import { api } from '../../../services/api';
 import PhotoCrud from '../../../assets/photo_crud.png';
 import EditCrud from '../../../assets/edit_crud.png';
 import DeleteCrud from '../../../assets/delete_crud.png';
 import { ListCrud } from '../../../components/ListCrud.jsx';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const AdminProductsIndex = () => {
   const [products, setProducts] = useState([]);
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+      navigate("/adminproducts");
+  }
 
   useEffect (() => {
     api.get('/products/index').then(response => setProducts(response.data))
@@ -18,10 +24,9 @@ const AdminProductsIndex = () => {
     if(window.confirm("Tem certeza que deseja apagar?")) {
       api.delete(`/products/delete/${id}`)
         .then((response) => alert('Produto deletado com sucesso!'))
-        .catch((error) => alert('Erro ao deletar produto!'))
+        handleClick()
     }  
   }
-
 
   return (
     <ListCrud>
@@ -50,13 +55,16 @@ const AdminProductsIndex = () => {
                   <div className='containers'><span>{item.brand.name}</span></div>
                   <div className='containers'><span>{item.inventory}</span></div>
                   <div className='containers'>
-                    <img src={`http://localhost:3001${item.images_url}`} alt='imagem do produto'/>
+                    <LazyLoadImage
+                    src={`http://localhost:3001${item.images_url}`} 
+                    alt='imagem do produto'
+                    effect='blur'/>
                   </div>
                   <div className='containers'>
                     <Link to={`/adminproducts/update/${item.id}`}>
                       <img src={ EditCrud } className='options' alt='editar'/>
                     </Link>
-                    <Link to={`/products/add_photo/${item.id}`}>
+                    <Link to={`/adminproducts/add_images/${item.id}`}>
                       <img src={ PhotoCrud } className='options' alt='adicionar foto'/>
                     </Link>
                     <button type='button' onClick={() => {deleteProduct(item.id)}}>

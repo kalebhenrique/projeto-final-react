@@ -3,14 +3,19 @@ import { Link } from 'react-router-dom'
 import { useUserContext } from '../../contexts/useUserContext.js'
 import { useEffect, useState } from 'react'
 import { api } from '../../services/api.js'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const EnterProfile = () => {
     const { user } = useUserContext()
     const id = user.id
     const [userData, setUserData] = useState('')
+    const [loading, setLoading] = useState(true)
     
     useEffect (() => {
-        api.get(`/users/show/${id}`).then(response => setUserData(response.data))
+        api.get(`/users/show/${id}`).then(response => {
+            setUserData(response.data)
+            setLoading(false)
+        })
       }, [id])
 
     return(
@@ -20,9 +25,15 @@ const EnterProfile = () => {
                 <Link to="/profile">
                     <ul>
                         <li>
+                            {loading && <p>Carregando...</p>}
+                            {!loading &&
                             <div>
-                                <img src={`http://localhost:3001${userData.profile_picture_url}`} alt='foto de perfil vazia'/>
+                                <LazyLoadImage
+                                src={`http://localhost:3001${userData.profile_picture_url}`} 
+                                alt='foto de perfil'
+                                effect='blur'/>
                             </div>
+                        }
                         </li>
                         <li>
                             <div>

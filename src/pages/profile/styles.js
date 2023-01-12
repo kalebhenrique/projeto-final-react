@@ -9,7 +9,7 @@ export const Container = styled.section`
     padding: 4rem;
     
     .logout {
-        margin-left: 90%;
+        margin-left: auto;
     }
 
     .logout a {
@@ -38,7 +38,8 @@ export const Container = styled.section`
     }
 
     .info {
-        margin-left: 70px;
+        margin-left: auto;
+        margin-bottom: 2rem;
     }
 
     div {
