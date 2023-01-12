@@ -15,7 +15,7 @@ const AdminProductsCreate = () => {
     const createProduct = async (e) => {
         e.preventDefault();
         if (name && price_in_cents && description && category_id && brand_id && inventory) {
-            const response = await api.post('/products/create', {
+            await api.post('/products/create', {
             name,
             description,
             inventory,
