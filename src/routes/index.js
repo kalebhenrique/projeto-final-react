@@ -20,7 +20,6 @@ import AdminCategoriesCreate from '../pages/admin_categories/create/index.js'
 import AdminCategoriesUpdate from '../pages/admin_categories/update/index.js'
 import AdminBrandsCreate from '../pages/admin_brands/create/index.js'
 import AdminBrandsUpdate from '../pages/admin_brands/update/index.js'
-import { AdminPages } from '../pages/admin_pages.js'
 
 const MyRoutes = () => {
     return(
@@ -36,19 +35,17 @@ const MyRoutes = () => {
                     <Route path='/cart' element={<CartPage/>} />
                     <Route path='*' element={<NotFound/> } />
                 </Route>
-                <Route path='/' element={<AdminPages/>} >
-                    <Route path='/admincategories' element={<AdminCategoriesIndex/>} />
-                    <Route path='/admincategories/create' element={<AdminCategoriesCreate/>} />
-                    <Route path='/admincategories/update/:id' element={<AdminCategoriesUpdate/>} />
-                    <Route path='/adminbrands' element={<AdminBrandsIndex/>} />
-                    <Route path='/adminbrands/create' element={<AdminBrandsCreate/>} />
-                    <Route path='/adminbrands/update/:id' element={<AdminBrandsUpdate/>} />
-                    <Route path='/adminproducts' element={<AdminProductsIndex/>} />
-                    <Route path='/adminproducts/create' element={<AdminProductsCreate/>} />
-                    <Route path='/adminproducts/update/:id' element={<AdminProductsUpdate/>} />
-                    <Route path='/adminproducts/add_images/:id' element={<AdminProductsAddImages/> } />
-                    <Route path='/adminusers' element={<AdminUsersIndex/>} />
-                </Route>
+                <Route path='/admincategories' element={<AdminCategoriesIndex/>} />
+                <Route path='/admincategories/create' element={<AdminCategoriesCreate/>} />
+                <Route path='/admincategories/update/:id' element={<AdminCategoriesUpdate/>} />
+                <Route path='/adminbrands' element={<AdminBrandsIndex/>} />
+                <Route path='/adminbrands/create' element={<AdminBrandsCreate/>} />
+                <Route path='/adminbrands/update/:id' element={<AdminBrandsUpdate/>} />
+                <Route path='/adminproducts' element={<AdminProductsIndex/>} />
+                <Route path='/adminproducts/create' element={<AdminProductsCreate/>} />
+                <Route path='/adminproducts/update/:id' element={<AdminProductsUpdate/>} />
+                <Route path='/adminproducts/add_images/:id' element={<AdminProductsAddImages/> } />
+                <Route path='/adminusers' element={<AdminUsersIndex/>} />
             </Routes>
     )
 }
