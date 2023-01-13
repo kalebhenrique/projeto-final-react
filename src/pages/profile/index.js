@@ -45,10 +45,10 @@ const ProfilePage = () => {
                         <ul className="menu">
                             <li><p className='admin_space'>Espaço do Administrador</p>
                                 <ul>
-                                    <li><Link to='/admin/products'>Produtos</Link></li>
-                                    <li><Link to='/admin/brands'>Marcas</Link></li>
-                                    <li><Link to='/admin/categories'>Categorias</Link></li>
-                                    <li><Link to='/admin/users'>Usuários</Link></li>
+                                    <li><Link to='/adminproducts'>Produtos</Link></li>
+                                    <li><Link to='/adminbrands'>Marcas</Link></li>
+                                    <li><Link to='/admincategories'>Categorias</Link></li>
+                                    <li><Link to='/adminusers'>Usuários</Link></li>
                                 </ul>
                             </li>
                         </ul>
