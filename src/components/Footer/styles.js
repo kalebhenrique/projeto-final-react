@@ -4,10 +4,12 @@ export const Container = styled.footer`
     width: 100%;
     background-color: #FFC700;
     max-height: 4.5rem;
-    height: 100%;
     display: flex;
     font-size: 20px;
     margin-top: 4rem;
+    margin-bottom: -1px;
+    bottom: 0;
+    height: 100%;
 
     p { 
         font-weight: bold;

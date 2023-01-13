@@ -32,7 +32,7 @@ const MyRoutes = () => {
                     <Route path='/product/:id' element={<ProductPage/>} />
                     <Route path='/profile' element={<ProfilePage/>} />
                     <Route path='/aboutus' element={<AboutUsPage/>} />
-                    <Route path='/cart' element={<CartPage/>} />
+                    <Route path='/cart/:id' element={<CartPage/>} />
                     <Route path='*' element={<NotFound/> } />
                 </Route>
                 <Route path='/admincategories' element={<AdminCategoriesIndex/>} />

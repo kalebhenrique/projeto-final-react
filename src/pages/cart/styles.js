@@ -1,47 +1,35 @@
 import styled from 'styled-components'
 
 export const Container = styled.section`
-    
-    img {
-        margin: auto;
-        max-width: 270px;
-        max-height: 270px;
-    }
+    justify-content:center;
+    margin: 0 auto;
+    align-items:center;
+    max-width: 1600px;
+    height: 800px;  
+    background-color: white;
+    border-radius: 5px;
+    padding: 50px;
+    font-weight: bold;
+    font-size: 20px;
 
-    info {
+    h1 {
         display: flex;
-        margin-top: 10px;
-        margin-left: 10px;
-        width: 260px;
-        border: none;
-        border-radius: 5px;
-        flex-direction: column;
-        padding: 8px;
+        margin-left: 128px;
+        font-family: 'Inter';
+        border-bottom: 2px solid;
+        width: 184px
     }
 
-    .name {
-        background: #E9E9E9;
-        font-size: 30px;
-    }
-
-    .quantity_box {
-        background: #E9E9E9;
+    .product_box{
+        width: 1500px;
+        height: 350px;
+        display: flex;
         flex-direction: row;
-        width: 170px;
-        margin-top: 40px;
-        font-size: 20px;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        border-radius: 0;
     }
 
-    .info p {
-        margin-top: 80px;
-        margin-left: 500px;
-        background: #E9E9E9;
-        font-size: 30px;
-        width: 110px;
-        height: 60px;
-        justify-content:center;
-    }
-    
     .total__container {
         margin-left: 1000px;
     }

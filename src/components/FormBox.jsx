@@ -8,6 +8,8 @@ export const FormBox = styled.div`
     margin-top: 3rem;
     margin-bottom: auto;
     width: 100%;
+    height: 85vh;
+    background-size: 100%;
 
     img {
         text-align: center;
