@@ -3,18 +3,16 @@ import { Link } from 'react-router-dom'
 import { useUserContext } from '../../contexts/useUserContext.js'
 import { useEffect, useState } from 'react'
 import { api } from '../../services/api.js'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
+import PlaceHolderPic from '../../assets/placeholder_profile_pic.png'
 
 const EnterProfile = () => {
     const { user } = useUserContext()
     const id = user.id
     const [userData, setUserData] = useState('')
-    const [loading, setLoading] = useState(true)
     
     useEffect (() => {
         api.get(`/users/show/${id}`).then(response => {
             setUserData(response.data)
-            setLoading(false)
         })
       }, [id])
 
@@ -25,15 +23,19 @@ const EnterProfile = () => {
                 <Link to="/profile">
                     <ul>
                         <li>
-                            {loading && <p>Carregando...</p>}
-                            {!loading &&
-                            <div>
-                                <LazyLoadImage
-                                src={`http://localhost:3001${userData.profile_picture_url}`} 
-                                alt='foto de perfil'
-                                effect='blur'/>
-                            </div>
-                        }
+                            {userData.profile_picture_url != null ? (
+                                <div>
+                                    <img
+                                    src={`http://localhost:3001${userData.profile_picture_url}`} 
+                                    alt='foto de perfil'/>
+                                </div>
+                            ) : (
+                                <div>
+                                    <img
+                                    src={ PlaceHolderPic } 
+                                    alt='foto de perfil'/>
+                                </div>
+                            )}
                         </li>
                         <li>
                             <div>
